@@ -1,0 +1,8 @@
+{
+	"empty instructions": {
+		"filename" : "empty.txt",
+		"start"    : "TIRANA",
+		"clues"    : "the quick brown box jumps over the lazy dog",
+		"expected" : []
+	}
+}

@@ -1,0 +1,28 @@
+
+# indizi: 	la	bocca	sollevò	dal	fiero	pasto
+# inizio:	ROMA
+ROMAlaPARIGIvendita	
+ROMAlaCAIROfurto
+ROMAlaMOSCAmata
+
+	PARIGIboccaBERLINOdiamanti
+	PARIGIboccaCANCUNcannoni
+	CAIROboccaMILANOdi
+	MOSCAboccaPECHINOhari
+
+		BERLINOsollevòPECHINOrubati
+		CANCUNsollevòROMAmercato
+		MILANOsollevòPARIGIdiamanti
+		PECHINOsollevòMILANOha
+			PECHINOdalROMAstanotte
+			ROMAdalMOSCAnero
+			PARIGIdalCAIROa
+			MILANOdalPARIGIsedotto
+				ROMAfieroPARIGIad
+				MOSCAfieroBERLINOdel
+				CAIROfieroCANCUNbuckingham
+				PARIGIfieroPECHINOambasciatore
+					PARIGIpastoCANCUNanversa
+					BERLINOpastoCANCUNcairo
+					CANCUNpastoMILANOpalace
+					PECHINOpastoMILANOzambia

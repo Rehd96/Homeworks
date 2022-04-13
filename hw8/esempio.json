@@ -1,0 +1,12 @@
+{
+	"esempio" : {
+		"filename" : "esempio.txt",
+		"clues"    : "la bocca sollevò dal fiero pasto",
+		"start"    : "ROMA",
+		"expected" : [
+			["vendita diamanti rubati stanotte ad anversa", "CANCUN"],
+			["vendita cannoni mercato nero del cairo",      "CANCUN"],
+			["furto di diamanti a buckingham palace",       "MILANO"],
+			["mata hari ha sedotto ambasciatore zambia",    "MILANO"]
+		] } 
+}

@@ -1,0 +1,10 @@
+{
+	"missing instructions and multiple ways" : {
+		"filename" : "missing.txt",
+		"clues"    : "one two three",
+		"start"    : "NEWYORK",
+		"expected" : [
+			["uno due tre", "SEATTLE"],
+			["uno due tre", "STANFORD"]
+		] } 
+}

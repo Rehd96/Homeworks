@@ -1,0 +1,26 @@
+Il programma è svolto senza classi e senza alberi.
+Apro il file di istruzioni, lo leggo,lo divido in linee,
+lo lavoro in modo da avere solo una lista con le varie informazioni
+In pratica ho AbCd, dove 'A' e 'C' sono le città e 'b' e 'd' indizio e segreto
+-----------------------
+Funzione ricorsiva:
+ho una stringa 'pista' che segue l'evoluzione delle piste
+Ho una struttura dove memorizzare le città in cui sono stato
+	caso base: aggiungo la pista trovata al set dei segreti
+	altrimenti, controllo città per città:
+		se la città inizia con quella di parteza e 
+		ha dentro di sè il primo indizio della lista indizi:
+			la nuova A sarà la C di quella attuale
+			a 'pista' si aggiunge il segreto 'd' attuale
+------------------------ chiamo la ricorsione con la nuova città, omettendo il primo indizio
+uscendo dalla ricorsione faccio che:
+			a 'pista' elimino l'ultima pista trovata
+			scorro a ritroso la città (dall'ultima alla penultima)
+ritorno i segreti
+
+La ricorsione funziona, passa tutti i test ma è terribilmente lenta in expo 10
+Infatti quello che la mia funzione fa è entrare in profondità nella lista
+prendere i vari indizi, se ci sono
+poi,uscendo, controlla anche le ulteriori città nel caso dovesse aggiungere altri segreti.
+Nel caso di test 'normali' va alla grande,
+purtroppo con gli exponential fa molti controlli e 'si arena'
