@@ -1,0 +1,44 @@
+apro il file di testo
+lo leggo
+lo divido in linee
+creo una stringa con tutti i segni di punteggiatura
+e li rimuovo dal testo
+trasformo i caratteri delle vocali non leggibili in leggibili
+rendo il testo minuscolo
+creo due liste,una per gli es e uno per le finali
+divido riga per riga il testo
+eseguo in contemporanea sia l'individuazione di es che di finali,ossia:
+	per ogni riga calcolo la sua lunghezza-1, creo due int vuoti(uno es1 e uno come indice,
+	una stringa per es finale,vuota e infine una variabile bool inizialmente vuota
+	controllo se la riga è vuota
+	controllo se inizia per vocale: se lo fa, aggiungo 1 a es1 
+	altrimenti, scorro la lista: se sono vocali aggiungo 1 a es1 e rendo il booleano falso
+	se incotro una vocale ritorna ad essere true.se non lo fa,signifca che ho due consonanti di fila,quindi le ignoro
+	cosi facendo mi sono trovato l'es
+
+	quello che vado poi a fare è la stessa cosa,ma al contrario
+	scorro la lista dalla fine, mi cerco solo il primo es rilevante che salvo nella stringa es finale
+
+inverto quindi la parola e la appendo alla lista delle finali,così come l'es
+
+cerco la prosodia:
+	creo una lista vuota e due contatori a 0, più un dizionario vuoto
+	scorro la lista delle finali
+	se l'elemento non è nel dizionario
+	lo aggiungo,passandogli indice e valore quelli nella posizione di es e listafinali
+	aumento i contatori
+	se invece la parola è presente
+	se ha stessa chiave e stesso valore la inserisco nella lista della prosodia
+	altrimenti aggiorno il dizionario...
+	come ancora non ho capito bene, ci sto lavorando
+
+comunque, vado avanti e divido la prosodia trovata in tante piccole parte,partendo da due fino alla dimensione della lista+1
+scorro la lisa riga per riga
+mi creo due sottoliste vuote una di controllo e una di verifica
+calcolo la lunghezza della riga-1, e scorro la lista con un while
+prendo il primo blocco della riga e calcolo le differenze di valori
+infatti cerco il modulo partendo da sequenze che hanno le stesse alterazioni di valori
+una volta che so che il primo è quello di controllo
+itero per ogni altro blocco, ma se la sequenza è diverso salto alla mini-prosodia dopo
+
+infine metto nella tupla i vari risultati trovati. Fine

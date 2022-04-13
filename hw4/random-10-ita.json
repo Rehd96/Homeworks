@@ -1,0 +1,9 @@
+{"random-10-ita":
+	{
+	"filename": "random-10-ita.txt", 
+	"prosody": [0, 1, 1, 2, 1, 3, 4, 4, 5, 4],
+	"module":	5,
+	"lengths":	[9, 4, 4, 14, 4, 9, 4, 4, 14, 4],
+	"finals":	["stii", "guay", "guay", "rgu", "guay", "tie", "gma", "gma", "mmi", "gma"]
+	}
+}

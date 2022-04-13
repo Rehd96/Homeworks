@@ -1,0 +1,9 @@
+{"random-25-eng":
+	{
+	"filename": "random-25-eng.txt", 
+	"prosody": 	[3, 3, 0, 0, 8],
+	"module": 	5,
+	"lengths":	[13, 13, 12, 12, 10, 13, 13, 12, 12, 10, 13, 13, 12, 12, 10, 13, 13, 12, 12, 10, 13, 13, 12, 12, 10],
+	"finals":	["lly", "lly", "sle", "sle", "chi", "gie", "gie", "rns", "rns", "rse", "ddy", "ddy", "tue", "tue", "zzo", "rlay", "rlay", "lea", "lea", "hua", "ll", "ll", "smo", "smo", "lpa"]
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"esempio" :
+		{ 
+		"filename" :	"esempio.txt",
+		"prosody":	[0, 1, 1, 2, 0, 3, 4, 4, 5, 3],
+		"module":	5,
+		"lengths":	[13, 14, 14, 8, 13, 13, 14, 14, 8, 13],
+		"finals":	["pea", "rpai", "rpai", "schiai", "pea", "rpe", "zoi", "zoi", "briai", "rpe"]
+		},
+	"example": 
+		{
+		"filename" : 	"example.txt",
+	 	"prosody":		[0, 1, 1, 2, 1, 3, 4, 4, 5, 4],
+		"module":		5,
+		"lengths":	 	[13, 6, 6, 14, 6, 13, 6, 6, 14, 6],
+		"finals":	 	["stra", "ldy", "ldy", "shy", "ldy", "shy", "zi", "zi", "rsley", "zi"]
+	 	}
+}

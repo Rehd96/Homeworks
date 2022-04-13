@@ -1,0 +1,105 @@
+periodo=0
+        for n in range(3,len(prosodia)//2+1):
+            prod= [prosodia[i:i + n] for i in range(0, len(prosodia), n)]
+            controllo= sottr(prod[0])
+            listacontrollo=[]
+            #print("dim controllo=",controllo,
+             #     "prod0 =",prod[0])
+            index= 0
+            indicecontrollo=0
+            for valore in prod[0]:
+                if valore not in listacontrollo:
+                    listacontrollo.append(indicecontrollo)
+                    indicecontrollo+=1
+                else:
+                    listacontrollo.append(-1)
+            procedo= False
+            while index < len(prod)-1:
+                
+                lista2=[]
+                listaappoggio=[]
+                indice2=0
+                #index è l'indice di scorrimento di prod
+                index+=1
+                if len(prod[0])!= len(prod[index]):
+                    break
+                tot = sottr(prod[index])
+                if tot!= controllo and procedo == False:
+                    break
+               # print("qui la riga è ",prod[index])
+                #print("qui il tot da controllare è ",tot)
+                #print("dim controllo=",controllo)
+                
+                if tot==controllo:
+                    procedo= True
+                    #print("qui hanno lo stesso controllo")
+                    #print("qui la seq controllo è ",listacontrollo)
+                    for valore2 in prod[index]:
+                        if valore2 not in listaappoggio:
+                            listaappoggio.append(valore2)
+                            lista2.append(indice2)
+                            indice2+=1
+                        else:
+                            lista2.append(-1)
+                        #print("si forma una lista tipo ",lista2)
+                        if len(lista2)>0:
+                            if lista2[0:indice2-1] != listacontrollo[0:indice2-1]:
+                                break
+            if lista2 == listacontrollo:
+                periodo=len(prod[0])
+                break
+        """
+        periodo=0
+        lista=[]
+        diff=0
+        for n in range(2,len(prosodia)//2+1):
+            prod= [prosodia[i:i + n] for i in range(0, len(prosodia), n)]
+            lista.append(prod)
+          #print(lista)
+
+
+
+
+        for riga in lista:
+            #seq1 è la lista con cui confrontare tutti gli elementi delle sotto-liste
+            seq1=[]
+            seq=[]
+            #diff=riga[0][ins]-riga[0][ins+1]
+            #seq.append(diff)
+    
+            lungh0= len(riga[0])-1 
+            #in ogni riga le sottosequenze hanno
+            #tutte la stessa lunghezza
+    
+    
+    
+            conta=0
+            #print("sto esaminando",riga)
+            while conta<lungh0:
+                diff=riga[0][conta]-riga[0][conta+1]
+                seq.append(diff)
+                conta+=1
+            #seq è la sequenza di controllo
+            #print("Sequenza di controllo",seq)
+            conta=0
+    
+    
+    
+            for elemento in riga[1:]:
+                if len(elemento) != len(riga[-0]):
+                    break
+                #print("attualmente esaminando",elemento)
+                while conta<lungh0:
+                    diff=elemento[conta]-elemento[conta+1]
+                    seq1.append(diff)
+                    conta+=1
+                #print("la sequenza in questo caso è",seq1)
+                if seq1!= seq:
+                    #print("Sequenza errata!")
+                    break
+                else:
+                    periodo=len(seq)+1
+                #print("Il periodo è",periodo)
+                seq1=[]
+                conta=0             
+                """
