@@ -1,0 +1,32 @@
+Carico l'immagine col modulo load.
+Prendo le dimensioni width e lenght dell'immagine
+Controllo per ogni riga se ci sono colori, se non ci sono passo direttamente a quella successiva
+	se incontro un colore, lo aggiungo ad un dizionario con dentro colore e coordinate
+ho quindi un dizionario con tutti i colori in ordine e l'angolo alto-sinistra
+per ogni elemento del dizionario
+	trasformato in lista
+	trovo la lunghezza e l'altezza
+	creo una lista con dentro l'elemento aggiornato di w e h
+Ordino i quadrati:
+	indice = 0
+	creo una copia della lista 
+	imposto un controllo booleano, si ferma il while quando finiscono i quadrati da ordinare
+	e un secondo booleano per verificare che il rettangolo sia valido nell'ordinamento
+	creo un dizionario vuoto
+		avrà dentro coordinate iniziali e colore
+	prendo l'elemento di indice indice
+	controllo uno ad uno i 4 segmenti ( lato su, sinistro, giù e destro)
+	controllo con una lista inizialmente vuota se per lato ci sta un pixel di colore diverso
+		se non è nella lista, salto al lato successivo
+	se ci sono elementi validi, significa che il secondo booleano è valido	
+	aggiungo alla lista dei colori trovati quello attuale
+	e lo rimuovo dalla copia del dizionario
+così trovo prima il rettangolo senza sovvraposizioni e da lì tutta la catena
+fino a che la lista della copia di q è vuota e si ferma il while
+mi trovo il bound
+Creo una nuova lista vuota
+inserisco qui i vari valori in base 256
+creo un'immagine vuota, che ad ogni riga ha i 5 valori ricavati in base 256
+la salvo
+ritorno il bond
+Non riesco a passare il test da 150, ad un certo punto mi va out of index .
