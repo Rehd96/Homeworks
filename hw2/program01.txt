@@ -1,0 +1,56 @@
+La prima cosa che ho scritto è stata la più semplice:
+Una funzionione che mi calcolasse i punti delle varie lettere.
+Va semplicemente a iterare un ciclo for:
+per ogni lettera nella parola in questione,
+controlla a quale lettera corrisponde quella cercata
+e le assegna un punteggio.
+Il giocatore che inserisce il punteggio ottiene i punti della parola
+Ed essendo pignolo, vengono sia considerate maiuscole e minuscole che eventuali caratteri extra. Spazi, punti o altro non daranno semplicemente nessun punto
+
+Ho quindi definito la funzione.
+Creo una lista dove salvare i punteggi dei vari giocatori, inizialmente 0 ciascuno
+Considero che qualsiasi siano le lettere giocabili e le varie mani, a inizio partita ogni giocatore riceve delle lettere
+Quindi creo sì una lista con i valori delle carte in mano di ogni giocatore, inizialmente di valore dim_hand
+Ma ciò significa che il numero di lettere totali è stato inizialmente diviso fra i 4 giocatori
+Cioè appunto num_letters -= lettere*4. Se ho 40 lettere e 4 giocatori, al primo turno ci saranno solo altre 20 carte
+creo un ciclo while che itera il corpo del programma
+Assegnandogli due condizioni: che ci siano tessere pescabili
+e che si possa giocare,ossia che almeno un giocatore abbia lettere a disposizione
+Qualora le lettere siano finite, infatti, si va al calcolo dei punti
+
+creo un contatore i per scorrere gli indici
+e un lista vuota, in cui inserire copia dei valori
+per ogni giocatore, se ha parole da poter giocare
+inserisco nel dizionario la sua parola
+calcolo ed assegno il suo punteggio
+elimino dalla lista 'madre' delle sue parole quella appena giocata, essendo inutile e dovendo scorrere nelle parole
+dato che è comunque quella inserita nel dizionario, di cui calcolo la lunghezza
+così da aggiornare le carte in mano al giocatore: le carte sono insomma state scartate
+Al che devo considerare se il giocatore può pescare lettere
+Metto due condizioni:
+La prima è che ci siano lettere pescabili a prescindere dalla mano, cioè che
+#le lettere disponibili siano >= a quelle che gli servono per giocare meno quelle che ha in mano
+Almeno, pescherà esattamente quelle che gli occorrono
+Infatti mi chiedo quante carte gli servano per avere il massimo di carte
+gliele faccio pescare
+diminuisco il numero delle carte rimanenti.
+Se invece non ha abbastanza lettere per completare la mano
+Ma ci sono comunque lettere giocabili
+Allora la sua mano sarà incrementata delle carte rimaste
+Che una volta finite, diventano -1, negative
+
+Aumento l'indice i, passo al giocatore successivo
+
+Se un giocatore ha finito in un turno di gioco le proprie lettere 
+significa che si deve smettere di giocare e andare a contare i punti
+
+In ogni caso, per ogni ciclo while devo ricapitolare il dizionario,essendo il turno di gioco finito
+quindi per ogni while il dizionario si svuota e si ricomincia dal primo
+La riuscita del programma dipende proprio dal fatto che ci siano mosse da fare
+se uno dei giocatori finisce, si esce dal while
+
+Arrivato alla fine della partita, calcolo i punti.
+In realtà vado semplicemente a scalare 3 punti per ogni carta in mano
+infatti il giocatore che ha finito le lettere non ne ha nessuna, quindi 0*3 = 0 punti in meno
+
+Ritorno quindi la lista dei punteggi
